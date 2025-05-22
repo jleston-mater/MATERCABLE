@@ -3,6 +3,7 @@
 	import CableDiagram from '../components/CableDiagram.svelte';
 
 	import { cableTypes, Sections } from '$lib/constants';
+	import { calculateCableSectionRaw, calculateCableSectionDeducted } from '$lib/calculations';
 
 	let cableType = $state('copper');
 	let cableLength = $state(15);
@@ -10,30 +11,17 @@
 	let voltageDropPercentage = $state(2);
 
 	let cableSectionRaw = $derived.by(() => {
-		let cableResistivity = cableTypes.find((cable) => cable.value === cableType)?.resistivity ?? 0;
-		const nominalVoltage = 230;
-		const deltaU_volts = (voltageDropPercentage / 100) * nominalVoltage;
-
-		let calculatedSection =
-			(cableResistivity * (2 * cableLength) * power) / (deltaU_volts * nominalVoltage);
-
-		return parseFloat(calculatedSection.toFixed(2));
+		return calculateCableSectionRaw(
+			cableType,
+			cableLength,
+			power,
+			voltageDropPercentage,
+			cableTypes
+		);
 	});
 
 	let cableSectionDeducted = $derived.by(() => {
-		const rawSection = cableSectionRaw;
-
-		if (isNaN(rawSection) || rawSection <= 0) {
-			return 0;
-		}
-
-		for (const section of Sections) {
-			if (rawSection <= section.value) {
-				return section.value;
-			}
-		}
-
-		return Sections[Sections.length - 1].value;
+		return calculateCableSectionDeducted(cableSectionRaw, Sections);
 	});
 </script>
 
