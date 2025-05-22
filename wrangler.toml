@@ -1,13 +1,9 @@
 name = "matercable"
 compatibility_date = "2025-05-22"
 
-main = "./.svelte-kit/cloudflare/_worker.js"
+main = "./.svelte-kit/cloudflare-workers/entry.js"
 
 compatibility_flags = ["nodejs_compat"]
 
 [build]
 command = "npm run build"
-
-[[durable_objects.bindings]]
-name = "COUNTER"
-class_name = "Counter"
