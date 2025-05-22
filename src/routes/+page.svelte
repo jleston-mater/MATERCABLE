@@ -1,4 +1,6 @@
 <script lang="ts">
+	import CableForm from '../components/CableForm.svelte';
+
 	let cableType = $state('copper');
 	let cableLength = $state(15);
 	let power = $state(2000);
@@ -100,70 +102,8 @@
 			Calculateur de section de câble électrique
 		</h2>
 
-		<form>
-			<div class="mb-4">
-				<label for="cableType" class="mb-2 block text-sm font-semibold text-gray-700"
-					>Type de Câble :</label
-				>
-				<select
-					id="cableType"
-					name="cableType"
-					bind:value={cableType}
-					class="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
-				>
-					<option value="copper">Cuivre</option>
-					<option value="aluminum">Aluminium</option>
-				</select>
-			</div>
+		<CableForm bind:cableType bind:cableLength bind:power bind:voltageDropPercentage />
 
-			<div class="mb-4">
-				<label for="length" class="mb-2 block text-sm font-semibold text-gray-700"
-					>Longueur du Câble (m) :</label
-				>
-				<input
-					type="number"
-					id="length"
-					name="length"
-					bind:value={cableLength}
-					class="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
-					min="0"
-					step="any"
-				/>
-			</div>
-
-			<div class="mb-4" data-type="monophase_power">
-				<label for="power" class="mb-2 block text-sm font-semibold text-gray-700"
-					>Puissance sur la ligne (W) :</label
-				>
-				<input
-					type="number"
-					id="power"
-					name="power"
-					placeholder="Ex: 2150"
-					bind:value={power}
-					class="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
-					min="0"
-					step="any"
-				/>
-			</div>
-
-			<div class="mb-6">
-				<label for="voltageDropPercentage" class="mb-2 block text-sm font-semibold text-gray-700"
-					>Chute de Tension Admissible (%) :</label
-				>
-				<input
-					type="number"
-					id="voltageDropPercentage"
-					name="voltageDropPercentage"
-					placeholder="Ex: 2"
-					bind:value={voltageDropPercentage}
-					class="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
-					min="0"
-					max="100"
-					step="0.1"
-				/>
-			</div>
-		</form>
 		<div class="rounded-md border border-orange-200">
 			<div id="result" class=" p-4 text-center text-lg">
 				<div class=" text-lg text-gray-800">
