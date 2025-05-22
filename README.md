@@ -1,4 +1,3 @@
-
 ## Développement
 
 Pour les phases de développement :
