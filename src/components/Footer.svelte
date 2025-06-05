@@ -1,4 +1,4 @@
-<div class="p-4">
+<div class="mt-14 p-4">
 	<p class="mt-6 text-center text-sm text-black">
 		Ces calculs sont des estimations. Toujours consulter les normes électriques locales (e.g., <a
 			class="text-blue-600 visited:text-purple-600"

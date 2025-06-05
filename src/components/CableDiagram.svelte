@@ -39,13 +39,20 @@
 	}
 </script>
 
-<div class="!lg:w-1/2">
+<div class="lg:w-1/2">
 	<div id="result" class="text-center text-lg font-semibold text-blue-800">
 		<p class="text-indigo-950">Section de câble recommandée</p>
 		<p class="text-3xl font-bold text-indigo-950">{cableSectionDeducted} mm²</p>
 	</div>
-	<div class="flex justify-center p-4 text-center">
-		<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+	<div class=" mx-auto flex w-full max-w-[500px] justify-center text-center lg:p-4">
+		<svg
+			width="400"
+			height="250"
+			viewBox="0 0 400 250"
+			preserveAspectRatio="xMidYMid meet"
+			class="h-auto w-full"
+			xmlns="http://www.w3.org/2000/svg"
+		>
 			<line
 				x1={lineX1}
 				y1="10"

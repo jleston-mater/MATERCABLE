@@ -12,7 +12,7 @@
 	}>();
 </script>
 
-<div class="mater-bg-primary !lg:w-1/2 w-full max-w-md rounded-l-4xl p-6">
+<div class="mater-bg-primary w-full p-6 lg:w-1/2 lg:max-w-md lg:rounded-l-4xl">
 	<h2 class="mb-6 text-4xl font-bold text-white">Calculateur de section de câble électrique</h2>
 	<form>
 		<div class="mb-4">

@@ -7,9 +7,9 @@
 </script>
 
 <div class="mx-auto space-y-4 p-4 lg:w-1/2">
-	<Accordion class="e rounded-xl border-indigo-900  focus:!border-[none]">
+	<Accordion class="rounded-4xl border-indigo-900  focus:!border-[none]">
 		<AccordionItem
-			class="rounded-xl bg-transparent  hover:bg-transparent focus:bg-transparent  focus:ring-0"
+			class="border-hidden bg-transparent  hover:bg-transparent focus:bg-transparent  focus:ring-0"
 		>
 			{#snippet header()}<span class="text-indigo-900"
 					>Comment est calculé la section de câble ?</span

@@ -8,8 +8,6 @@
 	import Formula from '../components/Formula.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	import { ArrowLeftOutline } from 'flowbite-svelte-icons';
-
 	let cableType = $state('copper');
 	let cableLength = $state(15);
 	let power = $state(2000);
@@ -30,22 +28,13 @@
 	});
 </script>
 
-<div>
+<div class="w-full">
 	<Header />
 
-	<div class="flex flex-col justify-center bg-indigo-200/50">
-		<div class="self-center p-4 px-4 lg:w-1/2">
-			<div class="mb-3">
-				<a
-					class="flex flex-row items-center text-indigo-900"
-					href="https://www.materfrance.fr/"
-					target="_blank"
-					><ArrowLeftOutline class="mr-3" />
-					<p class="text-sm">Retour au site de MaterFrance</p></a
-				>
-			</div>
+	<div class="  flex w-full flex-col justify-center bg-indigo-200/50">
+		<div class="w-full self-center lg:-mt-10 lg:w-1/2 lg:p-4 lg:px-4">
 			<div
-				class="flex flex-col items-center justify-center rounded-4xl border border-indigo-900 bg-white lg:flex-row"
+				class="flex flex-col items-center border border-indigo-900 bg-white lg:flex-row lg:rounded-4xl"
 			>
 				<CableForm bind:cableType bind:cableLength bind:power bind:voltageDropPercentage />
 				<CableDiagram bind:cableSectionDeducted />
