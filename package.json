@@ -20,6 +20,8 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/vite": "^4.0.0",
+		"flowbite": "^3.1.2",
+		"flowbite-svelte": "^1.5.3",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
@@ -29,5 +31,8 @@
 		"typescript": "^5.0.0",
 		"vite": "^6.2.6",
 		"wrangler": "^4.16.1"
+	},
+	"dependencies": {
+		"flowbite-svelte-icons": "^2.2.0"
 	}
 }
