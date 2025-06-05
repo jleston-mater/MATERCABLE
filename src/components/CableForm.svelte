@@ -72,8 +72,8 @@
 				placeholder="Ex: 2"
 				bind:value={voltageDropPercentage}
 				class="w-full appearance-none rounded-lg border border-neutral-200/50 bg-neutral-100/10 px-3 py-2 leading-tight text-white focus:outline-none"
-				min="0"
-				max="100"
+				min="1"
+				max="3"
 				step="0.1"
 			/>
 		</div>

@@ -6,19 +6,21 @@
 	}>();
 </script>
 
-<div class="mx-auto max-w-xl space-y-4 p-4">
-	<Accordion class="rounded-xl border-indigo-900  bg-blue-50  focus:!border-[none]">
-		<AccordionItem class="rounded-xl bg-blue-50  focus:bg-blue-50  focus:ring-0  ">
+<div class="mx-auto space-y-4 p-4 lg:w-1/2">
+	<Accordion class="e rounded-xl border-indigo-900  focus:!border-[none]">
+		<AccordionItem
+			class="rounded-xl bg-transparent  hover:bg-transparent focus:bg-transparent  focus:ring-0"
+		>
 			{#snippet header()}<span class="text-indigo-900"
 					>Comment est calculé la section de câble ?</span
 				>{/snippet}
 			{#snippet arrowup()}
-				<MinusOutline class="-me-0.5 h-4 w-4" />
+				<MinusOutline class=" h-4 w-4" />
 			{/snippet}
 			{#snippet arrowdown()}
-				<PlusOutline class="-me-0.5 h-4 w-4" />
+				<PlusOutline class=" h-4 w-4" />
 			{/snippet}
-			<div id="result" class=" p-4 text-center text-lg">
+			<div class=" p-4 text-center text-lg">
 				<div class=" text-lg text-gray-800">
 					<div class="flex items-center justify-center">
 						<div class="mr-2">Section de câble =</div>

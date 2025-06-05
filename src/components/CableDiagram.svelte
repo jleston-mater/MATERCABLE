@@ -40,7 +40,7 @@
 </script>
 
 <div class="!lg:w-1/2">
-	<div id="result" class="m-4 text-center text-lg font-semibold text-blue-800">
+	<div id="result" class="text-center text-lg font-semibold text-blue-800">
 		<p class="text-indigo-950">Section de câble recommandée</p>
 		<p class="text-3xl font-bold text-indigo-950">{cableSectionDeducted} mm²</p>
 	</div>
@@ -48,9 +48,9 @@
 		<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
 			<line
 				x1={lineX1}
-				y1="30"
+				y1="10"
 				x2={lineX2}
-				y2="30"
+				y2="10"
 				stroke={highlightStrokeColor}
 				stroke-width="4"
 			/>
@@ -61,7 +61,7 @@
 				</radialGradient>
 			</defs>
 
-			<g transform="translate(200, 50)">
+			<g transform="translate(200, 30)">
 				{#each [35, 25, 16, 10, 6, 4, 2.5, 1.5] as radius}
 					<path
 						d="M -{radius * 5} 0 A {radius * 5} {radius * 5} 0 0 0 {radius * 5} 0"
