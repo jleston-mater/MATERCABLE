@@ -6,7 +6,7 @@ export type CableOption = {
 
 export const cableTypes: CableOption[] = [
 	{ value: 'copper', label: 'Cuivre', resistivity: 0.023 },
-	{ value: 'aluminum', label: 'Aluminium', resistivity: 0.028 }
+	{ value: 'aluminum', label: 'Aluminium', resistivity: 0.037 }
 ];
 
 export type Section = {
